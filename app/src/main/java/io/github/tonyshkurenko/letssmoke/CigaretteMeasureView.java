@@ -22,7 +22,7 @@ public class CigaretteMeasureView extends View {
 
   static {
     PAINT.setStrokeWidth(8); // 8px
-    PAINT.setColor(Color.RED);
+    PAINT.setColor(Color.parseColor("#9e9e9e"));
   }
 
   private int mPeopleCount = 2;
