@@ -21,7 +21,7 @@ public class CigaretteMeasureView extends View {
   private final static Paint PAINT = new Paint();
 
   static {
-    PAINT.setStrokeWidth(10); // 10px
+    PAINT.setStrokeWidth(8); // 8px
     PAINT.setColor(Color.RED);
   }
 

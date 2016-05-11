@@ -32,10 +32,36 @@
       android:layout_alignParentRight="true"
       android:layout_alignParentEnd="true"/>
 
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Cigarette size:"
+      android:id="@+id/cigarette_size_label"/>
+
   <SeekBar
-      android:id="@+id/seek_bar"
+      android:id="@+id/cigarette_size_seek_bar"
       android:layout_width="280dp"
       android:layout_height="wrap_content"
-      android:max="400"
+      android:max="380"
+      android:layout_below="@id/cigarette_size_label"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_toRightOf="@+id/cigarette_size_label"
+      android:layout_toEndOf="@+id/cigarette_size_label"/>
+
+  <TextView
+      android:id="@+id/people_count_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="People count:"
+      android:layout_below="@id/cigarette_size_seek_bar"
   />
+
+  <NumberPicker
+      android:id="@+id/people_count_picker"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleX=".75"
+      android:scaleY=".75"
+      android:layout_below="@+id/people_count_label"/>
 </RelativeLayout>
