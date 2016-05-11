@@ -9,7 +9,7 @@
     android:paddingTop="@dimen/activity_margin"
     tools:context="io.github.tonyshkurenko.letssmoke.SmokeActivity">
 
-  <View
+  <io.github.tonyshkurenko.letssmoke.CigaretteMeasureView
       android:id="@+id/cigarette_head"
       android:layout_width="@dimen/cigarette_width"
       android:layout_height="@dimen/default_cigarette_height"
