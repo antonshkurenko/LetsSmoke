@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Как поделить сигарету?</string>
+  <string name="cigarette_size">Размер сигареты</string>
+  <string name="people_count">Кол-во людей</string>
+  <string name="smoking_kills">КУРЕНИЕ УБИВАЕТ</string>
+  <string name="title">Сигаретомер</string>
+</resources>

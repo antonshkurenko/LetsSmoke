@@ -1,16 +1,16 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
 
-    <style name="CigaretteView">
-        <item name="android:layout_marginRight">@dimen/cigarette_negative_margin</item>
-        <item name="android:layout_marginEnd">@dimen/cigarette_negative_margin</item>
-        <item name="android:layout_alignParentRight">true</item>
-        <item name="android:layout_alignParentEnd">true</item>
-    </style>
+  <style name="CigaretteView">
+    <item name="android:layout_marginRight">@dimen/cigarette_negative_margin</item>
+    <item name="android:layout_marginEnd">@dimen/cigarette_negative_margin</item>
+    <item name="android:layout_alignParentRight">true</item>
+    <item name="android:layout_alignParentEnd">true</item>
+  </style>
 
 </resources>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/container"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,11 +35,12 @@
       android:text="@string/cigarette_size"
       android:id="@+id/cigarette_size_label"/>
 
+  <!--      android:max="380"
+-->
   <SeekBar
       android:id="@+id/cigarette_size_seek_bar"
       android:layout_width="280dp"
       android:layout_height="wrap_content"
-      android:max="380"
       android:layout_below="@id/cigarette_size_label"
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true"

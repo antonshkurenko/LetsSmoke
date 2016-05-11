@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">Let\'s smoke!</string>
-    <string name="cigarette_size">Cigarette size</string>
-    <string name="people_count">People count</string>
-    <string name="copyright">© <a href="https://twitter.com/tonyshkurenko">Anton Shkurenko</a> 2016</string>
-    <string name="smoking_kills">SMOKING KILLS</string>
+  <string name="app_name">How to share a cigarette?</string>
+  <string name="title">Cigasharer</string>
+  <string name="cigarette_size">Cigarette size</string>
+  <string name="people_count">People count</string>
+  <string name="copyright" translatable="false">
+    ©
+    <a href="https://twitter.com/tonyshkurenko">Anton Shkurenko</a>
+    2016
+  </string>
+  <string name="smoking_kills">SMOKING KILLS</string>
 </resources>

@@ -1,9 +1,9 @@
 <resources>
 
-    <dimen name="activity_margin">16dp</dimen>
+  <dimen name="activity_margin">16dp</dimen>
 
-    <dimen name="default_cigarette_height">10dp</dimen>
+  <dimen name="default_cigarette_height">10dp</dimen>
 
-    <dimen name="cigarette_width">20dp</dimen>
-    <dimen name="cigarette_negative_margin">-5dp</dimen>
+  <dimen name="cigarette_width">20dp</dimen>
+  <dimen name="cigarette_negative_margin">-5dp</dimen>
 </resources>

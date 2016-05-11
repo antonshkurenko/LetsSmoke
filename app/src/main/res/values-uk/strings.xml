@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Як розділити цигарку.</string>
+  <string name="cigarette_size">Розмір цигарки</string>
+  <string name="people_count">К-сть людей</string>
+  <string name="smoking_kills">КУРІННЯ ВБИВАЄ</string>
+  <string name="title">Цигаркомір</string>
+</resources>

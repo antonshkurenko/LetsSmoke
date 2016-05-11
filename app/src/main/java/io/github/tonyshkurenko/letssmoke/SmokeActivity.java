@@ -3,13 +3,14 @@ package io.github.tonyshkurenko.letssmoke;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
-import android.util.TypedValue;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SmokeActivity extends AppCompatActivity
-    implements SeekBar.OnSeekBarChangeListener {
+public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+
+  View mContainer;
 
   CigaretteMeasureView mCigarette;
   SeekBar mCigaretteSeekBar;
@@ -25,6 +26,8 @@ public class SmokeActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_smoke);
 
+    mContainer = findViewById(R.id.container);
+
     mCigarette = ((CigaretteMeasureView) findViewById(R.id.cigarette_head));
     mCigaretteSeekBar = ((SeekBar) findViewById(R.id.cigarette_size_seek_bar));
     mPeopleSeekBar = ((SeekBar) findViewById(R.id.people_count_seek_bar));
@@ -38,7 +41,16 @@ public class SmokeActivity extends AppCompatActivity
     mPeopleSeekBar.setOnSeekBarChangeListener(this);
     mCigaretteSeekBar.setOnSeekBarChangeListener(this);
 
-    mCigaretteSeekBar.setProgress((int) (mCigaretteSeekBar.getMax() * 0.75f));
+    mContainer.post(new Runnable() {
+      @Override public void run() {
+
+        final float topY = mContainer.getY() + getResources().getDimension(R.dimen.activity_margin);
+        final float bottomY = mCigarette.getY();
+
+        mCigaretteSeekBar.setMax((int) (bottomY - topY));
+        mCigaretteSeekBar.setProgress((int) (mCigaretteSeekBar.getMax() * 0.75f));
+      }
+    });
   }
 
   //region Implements SeekBar.OnSeekBarChangeListener
@@ -48,9 +60,7 @@ public class SmokeActivity extends AppCompatActivity
       case R.id.cigarette_size_seek_bar:
         final ViewGroup.LayoutParams params = mCigarette.getLayoutParams();
 
-        params.height =
-            mDefaultHeight + (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, progress,
-                getResources().getDisplayMetrics());
+        params.height = mDefaultHeight + progress;
 
         mCigarette.setLayoutParams(params);
         break;
