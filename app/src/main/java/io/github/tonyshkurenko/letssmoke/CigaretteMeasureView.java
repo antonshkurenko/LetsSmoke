@@ -46,10 +46,6 @@ public class CigaretteMeasureView extends View {
   }
 
   //region Getters and setters
-  public int getPeopleCount() {
-    return mPeopleCount;
-  }
-
   public void setPeopleCount(int peopleCount) {
     mPeopleCount = peopleCount;
   }

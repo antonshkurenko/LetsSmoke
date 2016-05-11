@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_margin"
     android:paddingLeft="@dimen/activity_margin"
+    android:paddingStart="@dimen/activity_margin"
+    android:paddingRight="0dp"
+    android:paddingEnd="0dp"
     android:paddingTop="@dimen/activity_margin"
     tools:context="io.github.tonyshkurenko.letssmoke.SmokeActivity">
 
@@ -13,29 +16,22 @@
       android:id="@+id/cigarette_head"
       android:layout_width="@dimen/cigarette_width"
       android:layout_height="@dimen/default_cigarette_height"
-      android:adjustViewBounds="true"
-      android:layout_marginRight="@dimen/cigarette_negative_margin"
-      android:layout_marginEnd="@dimen/cigarette_negative_margin"
       android:background="@drawable/cigarette_head"
       android:layout_above="@+id/cigarette_body"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentEnd="true"/>
+      style="@style/CigaretteView"/>
 
   <View
       android:id="@+id/cigarette_body"
       android:layout_width="@dimen/cigarette_width"
       android:layout_height="80dp"
       android:background="@drawable/cigarette_body"
-      android:layout_marginRight="@dimen/cigarette_negative_margin"
-      android:layout_marginEnd="@dimen/cigarette_negative_margin"
       android:layout_alignParentBottom="true"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentEnd="true"/>
+      style="@style/CigaretteView"/>
 
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="Cigarette size:"
+      android:text="@string/cigarette_size"
       android:id="@+id/cigarette_size_label"/>
 
   <SeekBar
@@ -53,15 +49,38 @@
       android:id="@+id/people_count_label"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="People count:"
+      android:text="@string/people_count"
       android:layout_below="@id/cigarette_size_seek_bar"
   />
 
-  <NumberPicker
-      android:id="@+id/people_count_picker"
+  <SeekBar
+      android:id="@+id/people_count_seek_bar"
+      android:layout_width="280dp"
+      android:layout_height="wrap_content"
+      android:max="3"
+      android:layout_below="@+id/people_count_label"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_toRightOf="@+id/cigarette_size_label"
+      android:layout_toEndOf="@+id/cigarette_size_label"/>
+
+  <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:scaleX=".75"
-      android:scaleY=".75"
-      android:layout_below="@+id/people_count_label"/>
+      android:textAppearance="?android:attr/textAppearanceLarge"
+      android:text="@string/smoking_kills"
+      android:layout_centerInParent="true"
+      android:padding="8dp"
+  />
+
+  <TextView
+      android:id="@+id/copyright"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/copyright"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:linksClickable="true"
+  />
+
 </RelativeLayout>
