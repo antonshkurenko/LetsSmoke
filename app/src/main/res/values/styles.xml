@@ -12,5 +12,4 @@
     <item name="android:layout_alignParentRight">true</item>
     <item name="android:layout_alignParentEnd">true</item>
   </style>
-
 </resources>
