@@ -10,11 +10,24 @@
     tools:context="io.github.tonyshkurenko.letssmoke.SmokeActivity">
 
   <View
-      android:id="@+id/cigarette"
-      android:layout_width="40dp"
+      android:id="@+id/cigarette_head"
+      android:layout_width="@dimen/cigarette_width"
       android:layout_height="@dimen/default_cigarette_height"
       android:adjustViewBounds="true"
-      android:background="@drawable/red_square"
+      android:layout_marginRight="@dimen/cigarette_negative_margin"
+      android:layout_marginEnd="@dimen/cigarette_negative_margin"
+      android:background="@drawable/cigarette_head"
+      android:layout_above="@+id/cigarette_body"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"/>
+
+  <View
+      android:id="@+id/cigarette_body"
+      android:layout_width="@dimen/cigarette_width"
+      android:layout_height="80dp"
+      android:background="@drawable/cigarette_body"
+      android:layout_marginRight="@dimen/cigarette_negative_margin"
+      android:layout_marginEnd="@dimen/cigarette_negative_margin"
       android:layout_alignParentBottom="true"
       android:layout_alignParentRight="true"
       android:layout_alignParentEnd="true"/>
@@ -23,5 +36,6 @@
       android:id="@+id/seek_bar"
       android:layout_width="280dp"
       android:layout_height="wrap_content"
-      android:max="400"/>
+      android:max="400"
+  />
 </RelativeLayout>

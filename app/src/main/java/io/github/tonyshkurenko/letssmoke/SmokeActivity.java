@@ -11,7 +11,7 @@ import butterknife.ButterKnife;
 
 public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
-  @BindView(R.id.cigarette) View mCigarette;
+  @BindView(R.id.cigarette_head) View mCigarette;
   @BindView(R.id.seek_bar) SeekBar mSeekBar;
 
   private int mDefaultHeight;
@@ -37,10 +37,10 @@ public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBa
   }
 
   @Override public void onStartTrackingTouch(SeekBar seekBar) {
-
+    // ignored
   }
 
   @Override public void onStopTrackingTouch(SeekBar seekBar) {
-
+    // ignored
   }
 }
