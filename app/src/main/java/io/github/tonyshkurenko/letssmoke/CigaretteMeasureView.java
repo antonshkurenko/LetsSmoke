@@ -58,7 +58,6 @@ public class CigaretteMeasureView extends View {
     final int width = getWidth();
     final int sectionHeight = height / mPeopleCount;
 
-
     for (int i = 1; i < mPeopleCount; i++) {
       final int y = i * sectionHeight;
       canvas.drawLine(0, y, width, y, PAINT);

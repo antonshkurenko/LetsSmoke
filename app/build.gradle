@@ -11,6 +11,19 @@ android {
     versionCode 1
     versionName "1.0.0"
   }
+
+  Properties props = new Properties()
+  props.load(new FileInputStream(file("../local.properties")))
+
+  signingConfigs {
+    release {
+      storeFile file("smoke_keystore.jks")
+      storePassword props['password']
+      keyAlias "LetsSmoke"
+      keyPassword props['password']
+    }
+  }
+
   buildTypes {
 
     debug {
@@ -26,5 +39,5 @@ android {
 }
 
 dependencies {
-  compile 'com.android.support:appcompat-v7:23.3.0'
+  compile 'com.android.support:appcompat-v7:23.4.0'
 }

@@ -3,13 +3,14 @@ package io.github.tonyshkurenko.letssmoke;
 import android.app.Activity;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SmokeActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
+public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
 
   View mContainer;
 
