@@ -1,14 +1,15 @@
 package io.github.tonyshkurenko.letssmoke;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.preference.PreferenceManager;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+public class SmokeActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
 
   View mContainer;
 
@@ -17,6 +18,8 @@ public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBa
   SeekBar mPeopleSeekBar;
 
   TextView mCopyright;
+
+  private static final String PREFS_SAVED_LENGTH = "prefs_saved_length";
 
   private static final int MIN_PEOPLE_COUNT = 2;
 
@@ -48,7 +51,15 @@ public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBa
         final float bottomY = mCigarette.getY();
 
         mCigaretteSeekBar.setMax((int) (bottomY - topY));
-        mCigaretteSeekBar.setProgress((int) (mCigaretteSeekBar.getMax() * 0.75f));
+
+        final int length = PreferenceManager.getDefaultSharedPreferences(SmokeActivity.this)
+            .getInt(PREFS_SAVED_LENGTH, 0);
+
+        if (length == 0) {
+          mCigaretteSeekBar.setProgress((int) (mCigaretteSeekBar.getMax() * 0.75f));
+        } else {
+          mCigaretteSeekBar.setProgress(length);
+        }
       }
     });
   }
@@ -76,7 +87,10 @@ public class SmokeActivity extends AppCompatActivity implements SeekBar.OnSeekBa
   }
 
   @Override public void onStopTrackingTouch(SeekBar seekBar) {
-    // ignored
+    PreferenceManager.getDefaultSharedPreferences(this)
+        .edit()
+        .putInt(PREFS_SAVED_LENGTH, seekBar.getProgress())
+        .apply();
   }
   //endregion
 }
